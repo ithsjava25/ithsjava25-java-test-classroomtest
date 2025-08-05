@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Read assignment instructions
         id: instructions
@@ -76,7 +76,7 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Post Feedback as PR Comment
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           # The GITHUB_TOKEN is automatically created by Actions.
           github-token: ${{secrets.GITHUB_TOKEN}}
